@@ -1,0 +1,212 @@
+/* Imports my chosen font from a file */
+
+@font-face{
+    font-family: Orbiton;
+    src: url(/Assets/Fonts/Orbitron-VariableFont_wght.ttf)
+}
+
+/* removing default browser styling for all elements in regards to their padding 
+and margin */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* Body tag set up to give the flex property to all its children aswell
+as position them in a column format as opposed to row format */
+
+.container , html{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: white; 
+}
+
+/* Styles the black top bar that holds both links and logo, styled to be sticky
+with z index 100 so that it overlays over the top of body elements */
+
+.navBar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    z-index: 100;
+    transition: all .7s ease 0s;
+}
+
+/* anchor tag containing the logo image used to influence the logo position 
+throughout the pages */
+
+.logoContainer{
+    align-self: center;
+    height: 100%;
+    width: 50px;
+    padding: 5px; 
+    margin-left: 5px;
+}
+
+/* logo image element styled to complete fill its parent class */
+
+.logo{
+    height: 100%;
+    width: 100%;
+}
+
+/* creates the grey track that the links are contained in , This applies to
+desktop nav bar only */
+
+.links{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 5%;
+    border-radius:  8px;
+    background-color: #8a8686 ;
+    height: 30px;
+    margin-top: 10px;
+    flex: 1 1 auto;
+    max-width: 360px;
+}
+
+/* div element that contains the anchor tags for hyper links used to align all text links
+vertically and horizontally and ensure they are all the same size*/
+
+.navContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    cursor: pointer;
+}
+
+/* animation class that creates an absolute position element that overlays on top of navContainer
+transition property used to give delayed movement effect on hover */
+
+.animation{
+    position: absolute;
+    z-index: 0;
+    background-color:black;
+    border-radius:  inherit;
+    height: 30px;
+    cursor: pointer;
+    transition: all .7s ease 0s;
+}
+
+/* Hover and start position for navigation bar animations */
+
+.startHome, .navContainer:nth-child(1):hover~.animation{
+    left: 0px;
+    width: 120px;
+}
+.startRegistration, .navContainer:nth-child(2):hover~.animation{
+    left: 120px;
+    width: 120px;
+}
+.startLeaderboard, .navContainer:nth-child(3):hover~.animation{
+    left:240px;
+    width: 120px;
+}
+
+/* styles the text portion of the links removing underline and setting font to Orbiton
+z index set to ensure that the text appears visible on top of the animation div*/
+
+.nav{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 200%;
+    text-decoration: none;
+    font-family: Orbiton;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    z-index: 10;
+}
+
+/* sets my website background image property of flex 1 allows the div to fill all available 
+space on the screen, z index used to make sure navigation bar stays on top on scroll */
+
+
+
+/* sets the footer containing div giving it the fixed behaviour at the bottom of the screen*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 50px;
+    width: 70%;
+    background-color: black;
+    align-items: center;
+}
+
+/* anchor tags containing social images and social image styling */
+
+.socialContainer{
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.socialContainer > img{
+    width: 100%;
+    height: 100%;
+}
+
+/* spacer divs used to centre social containers in the footer */
+
+.spacer{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* mobile layout drop down menu button initially hidden and removed from document flow */
+
+#dropdown{
+    display: none;
+}
+
+/* div that contains mobile layout link buttons initially hidden*/
+
+#dropdownContainer{
+    height:  fit-content;
+    flex-direction: column;
+    display: none;
+}
+
+/* On multiple rapid #dropdown button presses links text elements would highlight, this
+class prevents link buttons in the navigation bar from being highlighted*/
+
+.disableSelect{
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

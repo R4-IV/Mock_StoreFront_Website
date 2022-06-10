@@ -1,0 +1,100 @@
+#view-product-page{
+    display: block;
+}
+
+#search-results{
+    height: calc(100% - 110px);
+    overflow-y: scroll;
+}
+
+body{
+    background-color: #141414 !important;
+}
+
+#search-input{
+    border-color: red;
+    border-width: 2px;
+
+}
+
+#sort-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+#sort-text , #highest , #lowest{
+    font-family: monospace;
+    font-weight: bolder;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+#view-game-header {
+    border-color: red;
+    background-color: #141414 ;
+    color: white;
+}
+
+#search-button{
+    border-color: red;
+    background-color: #141414;
+    color: red
+}
+#search-button:hover{
+    color: white;
+    border-color: red;
+    background-color: #141414;
+}
+
+#search-container{
+    border-color: red;
+    background-color: #141414 ;
+}
+
+#sort-text{
+    margin-top: 6px;
+    margin-left: auto;
+}
+
+#highest{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid red;
+    cursor: pointer;
+    border-right-width: 0px;
+    color: white;
+    background-color:#141414;
+}
+
+#lowest{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px;
+    border: 1px solid red;
+    background-color:#141414;
+    color: white;
+    cursor: pointer;
+}
+
+#add-to-basket{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    background-color: orange;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: auto;
+    border: 2px solid black;
+    color: white;
+    user-select: none;
+}

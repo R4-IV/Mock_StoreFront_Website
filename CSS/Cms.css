@@ -1,0 +1,1384 @@
+body , html {
+    height: 100% !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+#options-bar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-y: scroll;
+    width: 25%;
+    height: inherit;
+}
+
+#content{
+    height: inherit;
+    background-color: #e3e3e3;
+    width: 75%;
+}
+
+
+#top-bar{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    background-color: red;
+    box-shadow: black;
+}
+
+#company-logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url(/Assets/Images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#employee-id{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin-left: 20px;
+    line-height: 70px;
+    user-select: none;
+}
+
+#logout-button{
+    height: 30px;
+    width: 80px;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 1px;
+    font-weight: bolder;
+}
+
+#logout-button:hover{
+    height: 32px;
+    width: 82px;
+    margin-top: 19px;
+    margin-right: 9px;
+    margin-left: 0px;
+    line-height: 32px;
+}
+
+#live-date{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#date , #time{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 20px;
+    user-select: none;
+}
+
+#date{
+    margin-top: 15px;
+}
+
+#time{
+    margin-bottom: 15px;
+}
+
+
+
+.options{
+    font-family:monospace;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
+
+.options:hover{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+}
+
+.header{
+    font-family:sans-serif;
+    align-self: center;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    color: black;
+}
+#dashboard{
+    margin-top: 10px;
+}
+
+#product-management{
+    margin-top: 20px;
+}
+
+#order-management{
+    margin-top: 20px;
+}
+
+#customer-management{
+    margin-top: 20px;
+}
+
+#employee-management{
+    margin-top: 20px;
+}
+
+.active{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+}
+
+#add-product-page{
+   display: none;
+   flex-direction: column;
+   height: 100%;
+   padding-bottom: 80px;
+   overflow-y: scroll;
+}
+
+#game-title , #game-price{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    margin-bottom: 10px;
+    height: 20px;
+    outline: none;
+}
+
+.input-headers{
+    padding-left: 10px;
+    font-weight: bolder;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-family: monospace;
+    border-bottom: #afb3ba 2px solid;
+}
+
+
+#first-row , #second-row , #third-row ,#fourth-row , #fifth-row , #sixth-row , #seventh-row{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: #afb3ba 2px solid;
+}
+
+#page{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.platforms{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+
+.hidden-indicator{
+    display: none;
+}
+
+.platform-text , .quantity{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.close{
+    margin-top: 10px;
+    font-family: monospace;
+    font-weight: bolder;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+}
+
+.platform-selection-container{
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.quantity{
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.game-quantity{
+    width: 50px;
+    height: 20px;
+    margin-left: 10px;
+    outline: none;
+    text-align: center;
+}
+
+#add-more-platforms{
+    font-family: monospace;
+    font-weight: bolder;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: fit-content;
+    user-select: none;
+}
+
+#platforms-button-divider{
+    border-top: #afb3ba 2px solid ;
+}
+
+.close:hover , #add-more-platforms:hover{
+    color: #afb3ba ;
+}
+
+.drop-down-content{
+    display: none;
+    position: absolute;
+    width: inherit;
+    height: 60px;
+    top: 30px;
+    background-color: white;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+.vertical-split{
+    position: relative;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.select-platform{
+    border: 1px black solid;
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: monospace;
+    text-align: center;
+    font-size: 10px;
+    line-height: 18px;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.first-platform , .second-platform , .third-platform{
+    height: 20px;
+    width: inherit;
+}
+
+.first-platform{
+    background-image: url(/Assets/Images/ps4.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color:#003791;
+    border-right: 1px solid black ;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+.second-platform{
+    background-image: url(/Assets/Images/xbone.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color:#107C10;
+    border-right: 1px solid black ;
+    border-left: 1px solid black;
+    cursor: pointer;
+}
+
+.third-platform{
+    background-image: url(/Assets/Images/switch.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color:#E70009;
+    border-right: 1px solid black ;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black ;
+    cursor: pointer;
+}
+
+.quantity-text{
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.index-of-content{
+    display: none;
+}
+
+.first-platform:hover , .second-platform:hover , .third-platform:hover{
+    border: 2px solid black;
+}
+
+#checkbox-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.checkbox-top{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    font-family: monospace;
+    line-height: 30px;
+    font-weight: bolder;
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+.checkbox{
+    align-self: center;
+}
+
+#genre-description{
+    border-top: #afb3ba 2px solid ;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+}
+
+#game-description{
+    height: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    margin-right: 10px;
+    height: 100px;
+    resize: none;
+}
+
+#rating-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.rating-vertical{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rating-image{
+    width: 50px;
+    height: 75px;
+}
+
+#E , #E10 , #T , #M , #AO{
+    margin-left: 18px;
+}
+
+#E-image{
+    background-image: url(/Assets/Images/Erating.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#E10-image{
+    background-image: url(/Assets/Images/E10rating.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#T-image{
+    background-image: url(/Assets/Images/Trating.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#M-image{
+    background-image: url(/Assets/Images/Mrating.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#AO-image{
+    background-image: url(/Assets/Images/AOrating.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#drag-target{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom:20px;
+    border-radius: 7px;
+    height: 250px;
+    width: 250px;
+    font-family: monospace;
+    font-weight: bolder;
+    line-height: 250px;
+    text-align: center;
+    border: 1px solid #afb3ba;
+}
+
+
+.high-light{
+    border:5px solid red !important;
+}
+
+.loaded-image{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    height: 250px;
+    width: 250px;
+    z-index: 1;
+}
+
+#preview-container{
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+}
+
+#preview-image{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 7px;
+    z-index: 2;
+}
+
+#delete-preview-image{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(59, 59, 59, 0.5);
+    border-radius: 5px;
+    line-height: 18px;
+    text-align: center;
+    top: 5px;
+    right: 5px;
+    color: white;
+    display: none;
+
+}
+
+#preview-image:hover + #delete-preview-image{
+    display: block;
+}
+
+#delete-preview-image:hover{
+    cursor: pointer;
+    color: #afb3ba;
+    display: block;
+    background-color: rgba(59, 59, 59, 1.0);
+    user-select: none;
+}
+
+
+
+#submit-product{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 120px;
+    border-radius: 7px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+    line-height: 40px;
+    box-shadow: 1px 1px black;
+}
+
+#submit-product:hover{
+    cursor: pointer;
+}
+
+.errorClass{
+    border: 2px solid red !important;
+}
+
+
+#view-product-page{
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 80px;
+ }
+
+ #search-container{
+     display: flex;
+     flex-direction: row;
+     width: calc(100% - 20px);
+     height: 60px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     background-color: white;
+     border-radius: 0px;
+     margin-left: 10px;
+     margin-right: 10px;
+     border: 2px solid #afb3ba;
+ }
+
+ #view-game-header{
+     margin-top: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+     width: calc(100% - 20px);
+     background-color: white;
+     font-family: monospace;
+     font-weight: bolder;
+     border-style: solid;
+     border-color: #afb3ba;
+     border-width: 2px;
+     border-bottom-width: 0px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 10px;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+
+
+
+
+ #search-button{
+     width: 100px;
+     font-family: monospace;
+     font-weight: bolder;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 5px;
+     padding-right: 5px;
+     border-style: solid;
+     border-width: 1px;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+     text-align: center;
+     background-color: white;
+     height: 30px;
+     margin-top: auto;
+     margin-bottom: auto;
+     margin-left: 20px;
+     cursor: pointer;
+ }
+
+ #search-input{
+     height: 30px;
+     text-align: center;
+     outline: none;
+     margin-top: auto;
+     margin-bottom: auto;
+     border-color: black;
+     border-top-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+     border-width: 1px;
+     border-left-width: 0px;
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+     margin-right: 20px;
+     width: calc(100% - 140px);
+ }
+
+
+#search-button:hover{
+    background-color:#afb3ba;
+    color: white;
+    border-color: black;
+}
+
+.game-entry{
+    display:flex;
+    flex-direction: row;
+    margin-top: 2px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    border:2px solid #afb3ba;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.game-entry:hover{
+   border: 3px solid blue;
+}
+
+#search-results{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+
+.display-game-thumbnail{
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    z-index: 1;
+}
+
+.display-platform{
+    display: flex;
+    flex-direction: column;
+    height:120px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 35px;
+    z-index: 1;
+}
+
+.display-game-title{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+}
+
+.display-game-price{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-right: 15px;
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.active-platform{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+}
+
+#modal-box{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(0 , 0 , 0 , 0.8);
+    overflow: auto;
+}
+
+#modal-content{
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(62.5% - 110px);
+    margin-top: 400px;
+    height: 90px;
+    width: 220px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#modal-text{
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    background-color: red;
+    border-bottom: 1px solid black;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+
+.modal-button{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    height: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    border-radius: 5px;
+    border:2px solid black;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 12px;
+    user-select: none;
+}
+
+#modal-button-addGame{
+    display: none;
+}
+
+#modal-button-deleteGame{
+    display: none;
+}
+
+
+
+
+.modal-button:hover{
+    cursor: pointer;
+}
+
+.hidden-index-product{
+    display: none;
+}
+
+#detailed-product-page{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 90px);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#return-to-search-button{
+    font-family: monospace;
+    font-weight: bolder;
+    color:lightskyblue;
+    text-decoration: underline;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#detail-product-title{
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#detailed-product-details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#detailed-product-image{
+    border-radius: 15px;
+    min-width: 280px;
+    height: 280px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    background-size: 280px 280px;
+    background-repeat: no-repeat;
+}
+
+#detailed-product-information{
+    display: flex;
+    flex-direction: column;
+    min-width: 340px;
+    max-width: 340px;
+    height: 280px;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    
+}
+
+#platform-table{
+    display: flex;
+    flex-direction: column;
+}
+
+#detailed-platforms , #detailed-quantity{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.individual-detailed-platform , .individual-detailed-quantity{
+    font-family: monospace;
+    font-weight: bolder;
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 25px;
+    border-left-width: 0px;
+}
+
+.individual-detailed-platform{
+    border-bottom-width: 0px;
+    color: white;
+}
+
+
+#detailed-quantity-text , #detailed-platform-text{
+    border-left-width: 1px;
+    color: black;
+}
+
+#detailed-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#detailed-ESRB-container , #detailed-Price-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#ESRB-text , #price-text {
+    font-family: monospace;
+    font-weight: bolder;
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 25px;
+    border-bottom-width: 0px;
+}
+
+#ESRB-text{
+    border-right-width: 0px;
+}
+
+#ESRB-image , #numeric-price {
+    width: 100px;
+    height: 70px;
+    border: 1px solid black;;
+}
+
+#ESRB-image{
+    border-right-width: 0px ;
+    background-size: 50px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#numeric-price{
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 65px;
+}
+
+#available-platforms , #detailed-genres{
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#genres-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.genres-list{
+    font-family: monospace;
+    font-weight: bolder;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: lightskyblue;
+}
+
+#detailed-description-text{
+    width: 640px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    padding: 8px;
+    font-weight: bolder;
+    font-family: monospace;
+}
+
+#action-bar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#delete-product-button{
+    margin-left: auto;
+    margin-right:10px;
+    width: 150px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+
+#edit-product-button{
+    margin-right: auto;
+    margin-left: 10px;
+    width: 150px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    background-color:blue;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+
+#synopsis{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+.edit-buttons{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    height: 40px;
+    width: 120px;
+    border-radius: 7px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+    line-height: 40px;
+    box-shadow: 1px 1px black;
+}
+
+.edit-buttons:hover{
+    cursor: pointer;
+}
+
+#edit-button-container{
+    display: none;
+    flex-direction: row;
+}
+
+#edit-and-save-button{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+#exit-without-changing{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+#order-options{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    height: 60px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:0px ;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid #afb3ba;
+}
+
+
+
+
+ #pending{
+    height: 40px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px black;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#deleted:hover , #completed:hover , #pending:hover{
+    background-color: red;
+    color: white;
+}
+
+.activeOrder{
+    background-color: red;
+    color: white;
+}
+
+.order-container{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 20px);
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    border: 2px solid #afb3ba;
+    cursor: pointer;
+}
+
+.orderID{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-left: 10px;
+    line-height: 45px;
+}
+
+.order-total{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-right: 10px;
+    margin-left: auto;
+    line-height: 45px;
+}
+
+.order-container:hover{
+    border-color: blue;
+}
+
+#orders{
+    display: none;
+}
+
+#detailed-order-page{
+    display: none;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: calc(100% - 90px);
+    margin-bottom: 180px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+#return-to-orders-page{
+    color:lightskyblue;
+    cursor: pointer;
+    user-select: none;
+    font-family: monospace;
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+#order-details , #shipping-address-text{
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#date-placed-container , #order-id-container , #order-status-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#order-date-text ,#order-id-text ,#order-status-text{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+#item-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#item-table-headers{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+#item-header{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: monospace;
+    font-weight: bolder;
+    border: 2px solid black;
+    width: 50%;
+    height: 30px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 25px;
+}
+
+#platform-header , .order-platform{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    border: 2px solid black;
+    height: 30px;
+    border-left-width: 0px;
+    width: 20%;
+}
+
+#quantity-header , .order-qty{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    border: 2px solid black;
+    height: 30px;
+    border-left-width: 0px;
+    width: 10%;
+}
+
+#subtotal-header , .order-subtotal{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    border: 2px solid black;
+    height: 30px;
+    border-left-width: 0px;
+    width: calc(20% - 20px);
+    margin-right: 10px;
+}
+
+
+
+#total-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#total-text{
+    width:80px;
+    border: 2px solid black;
+    height: 30px;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: auto;
+    line-height: 25px;
+}
+
+#total-price{
+    border: 2px solid black;
+    height: 30px;
+    border-left-width: 0px;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 25px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.shipping-line{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+#shipping-address-text{
+    margin-top: 40px;
+}
+
+#order-action-bar{
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+#delete-order{
+    margin-left: auto;
+    height: 30px;
+    line-height: 25px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    margin-right: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#complete-order{
+    margin-left: 10px;
+    height: 30px;
+    line-height: 25px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: green;
+    margin-right: auto;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.orderIndex{
+    display: none;
+}
+
+#order-status , #order-id , #order-date{
+    font-family: monospace;
+    font-weight: bolder;
+    margin-left: 10px;
+    color: lightskyblue;
+}
+
+.order-image{
+    width: 25px;
+    height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    border-radius: 5px;
+}
+
+.order-game-title{
+    font-family: monospace;
+    font-weight: bolder;
+    line-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-and-title{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-top-width: 0px;
+    width: 50%;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.item-entry{
+    display: flex;
+    flex-direction: row;
+}
+
+.order-platform{
+    border-top-width: 0px;
+}
+
+.order-qty{
+    border-top-width: 0px ;
+}
+
+.order-subtotal{
+    border-top-width: 0px;
+}
+
+#item-header , #platform-header , #quantity-header , #subtotal-header{
+    background-color: #afb3ba ;
+}
+
+
+

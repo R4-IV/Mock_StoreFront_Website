@@ -1,0 +1,273 @@
+/* Styles the content class specific to this page */
+
+.content{
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+}
+
+body{
+    background-color: #141414 !important;
+}
+/* Creates Styling for the bounding element of all children on the page */
+.regPage{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #141414 ;
+    width: 100%;
+    height: fit-content;
+    min-height: 680px;
+    min-width: 400px;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+/*Styling for the REGISTRATION: text */
+
+#regText{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Orbiton;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/*Styling for the form allowing its children to be positioned vertically */
+
+#regInputs{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Styling for each row of inputs including row which is the bounding container , text which is the div containing 
+the descriptor of the field and inputs which are <input> elements making up the fields */
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.text{
+    font-family: Orbiton;
+    color: white;
+    font-size: 16px;
+    min-width: 170px;
+    margin-left: 20px;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 10px;
+    max-width: 430px;
+    font-family: Orbiton;
+    font-size: 14px;
+    height: 22px;
+    border-style: none;
+    border-width: 2px ;
+}
+
+/* Spacer element used to create gaps between rows of inputs */
+
+.regSpacer{
+    height: 50px;
+}
+
+/* Styling for the orange text that instructs the user on username and password format  */
+
+.instruction{
+    margin-top: 10px;
+    width: fit-content;
+    max-width: 430px;
+    margin-right: 42px;
+    margin-left: 190px;
+    font-family: Orbiton;
+    color:red;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* The text for confirm password spans for 2 lines this style ensures that the field is vertically centered between them */
+
+#confirmPassword{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#passwordConfirmCheck{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Styling for the registeration button at the bottom of the page */
+
+#register{
+    margin-top: 50px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: red;
+    font-family: Orbiton;
+    cursor: pointer;
+}
+
+
+/* styling for the hyperlink taking the user back to login on the home page */
+
+#logLink{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: white;
+    font-family: Orbiton;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+/* empty div element prepared to output an error mark or check mark based on user input in password and username */
+
+.checkmarkSpacer{
+    min-width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    background-size: 100%;
+}
+
+/* Styling for the date of birth input fields */
+#dobDay{
+    margin-left: 0px;
+}
+#dobYear{
+    margin-right: 0px;
+}
+.inputsInner{
+    width: 33%;
+    font-family: inherit;
+    text-align: inherit;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: inherit;
+    border-style: inherit;
+}
+
+/* Bounding scrollable container for terms of service*/
+
+.terms{
+    margin-top: 5px;
+    padding: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    height:250px;
+    border-style: solid;
+    border-color:red;
+    border-radius: 8px;
+    font-family: Orbiton;
+    color: white;
+    font-size: 12px;
+}
+
+/* Formatting for text inside terms of service container */
+
+.termText{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Orbiton;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Styling for checkbox and label to accept terms of service */
+
+.checkBox{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#checkLabel{
+    font-family: Orbiton;
+    color: white;
+    font-size: 14px;
+    align-self: center;
+    margin-left: 5px;
+}
+#termBox{
+    align-self: center;
+}
+
+/* Styling for the list insde of the term of service text */
+
+.terms > ol {
+    padding-left: 10px;
+}
+
+.errorDiv{
+    margin-top: 5px;
+    max-width: 430px;
+    margin-right: 42px;
+    margin-left: 190px;
+    font-family: Orbiton;
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
+
+#aConfirmation{
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #141414;
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+    min-width: 400px;
+    max-width: 800px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+#aText{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Orbiton;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#aLink{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Orbiton;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
